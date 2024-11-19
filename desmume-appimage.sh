@@ -32,7 +32,7 @@ cp -r /usr/lib/gio       ./shared/lib
 # ADD LIBRARIES
 wget "$LIB4BN" -O ./lib4bin
 chmod +x ./lib4bin
-./lib4bin -p -v -r -e -s /usr/bin/"$TARGET_BIN"*
+xvfb-run -d -- ./lib4bin -p -v -r -e -s /usr/bin/"$TARGET_BIN"*
 
 # Prepare sharun
 echo "Preparing sharun..."
