@@ -22,7 +22,7 @@ jobs:
           desktop-file-utils git artix-archlinux-support llvm mesa xorg-server-xvfb
         pacman-key --init && pacman-key --populate archlinux
         printf "\n[extra]\nInclude = /etc/pacman.d/mirrorlist-arch\n" | tee -a /etc/pacman.conf
-        pacman -Syu --noconfirm base-devel desmume zsync
+        pacman -Syu --noconfirm base-devel desmume zsync pulseaudio pulseaudio-alsa
 
         chmod +x ./*-appimage.sh && ./*-appimage.sh
         mkdir dist
