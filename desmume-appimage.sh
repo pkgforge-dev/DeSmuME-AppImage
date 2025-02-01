@@ -10,6 +10,7 @@ TARGET_BIN="$PACKAGE"
 export ARCH="$(uname -m)"
 export APPIMAGE_EXTRACT_AND_RUN=1
 export VERSION="$(pacman -Q "$PACKAGE" | awk 'NR==1 {print $2; exit}')"
+echo "$VERSION" > ~/version
 
 UPINFO="gh-releases-zsync|$(echo "$GITHUB_REPOSITORY" | tr '/' '|')|latest|*$ARCH.AppImage.zsync"
 LIB4BN="https://raw.githubusercontent.com/VHSgunzo/sharun/refs/heads/main/lib4bin"
