@@ -27,7 +27,7 @@ cp /usr/share/icons/hicolor/scalable/apps/"$ICON" ./.DirIcon
 # ADD LIBRARIES
 wget "$LIB4BN" -O ./lib4bin
 chmod +x ./lib4bin
-xvfb-run -a -- ./lib4bin -p -v -r -e -s -k \
+xvfb-run -a -- ./lib4bin -p -v -e -s -k \
 	/usr/bin/"$TARGET_BIN"* \
 	/usr/lib/libGLX* \
 	/usr/lib/libGL.so* \
