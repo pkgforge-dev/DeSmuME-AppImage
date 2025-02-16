@@ -34,10 +34,10 @@ jobs:
 
     - name: Install iculess libxml2
       run: |
-        #LIBXML_URL="https://github.com/pkgforge-dev/llvm-libs-debloated/releases/download/continuous/libxml2-iculess-x86_64.pkg.tar.zst"
-        #wget "$LIBXML_URL" -O ./libxml2.pkg.tar.zst
-        #pacman -U --noconfirm ./libxml2.pkg.tar.zst
-        #rm -f ./libxml2.pkg.tar.zst
+        LIBXML_URL="https://github.com/pkgforge-dev/llvm-libs-debloated/releases/download/continuous/libxml2-iculess-x86_64.pkg.tar.zst"
+        wget "$LIBXML_URL" -O ./libxml2.pkg.tar.zst
+        pacman -U --noconfirm ./libxml2.pkg.tar.zst
+        rm -f ./libxml2.pkg.tar.zst
 
     - name: Make AppImage
       run: |
