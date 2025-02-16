@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    container: archlinux:latest
+    container: artixlinux/artixlinux:latest
     steps:
     - uses: actions/checkout@v3
 
@@ -24,6 +24,7 @@ jobs:
         pacman-key --init && pacman-key --populate archlinux
         printf "\n[extra]\nInclude = /etc/pacman.d/mirrorlist-arch\n" | tee -a /etc/pacman.conf
         pacman -Syu --noconfirm base-devel desmume zsync pulseaudio pulseaudio-alsa
+        pacman -Q gtk3
 
     - name: Install debloated llvm-libs
       run: |
