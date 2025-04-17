@@ -15,19 +15,18 @@ OPUS_URL="https://github.com/pkgforge-dev/llvm-libs-debloated/releases/download/
 echo "Installing dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-	base-devel
-	curl
-	desktop-file-utils
-	desmume
-	git
-	llvm
-	mesa
-	patchelf
-	pulseaudio
-	pulseaudio-alsa
-	strace
-	wget
-	xorg-server-xvfb
+	base-devel \
+	curl \
+	desktop-file-utils \
+	desmume \
+	git \
+	mesa \
+	patchelf \
+	pulseaudio \
+	pulseaudio-alsa \
+	strace \
+	wget \
+	xorg-server-xvfb \
 	zsync
 
 echo "Installing debloated pckages..."
