@@ -23,6 +23,7 @@ pacman -Syu --noconfirm \
 	desmume \
 	git \
 	libdecor \
+	libxss \
 	mesa \
 	patchelf \
 	pipewire-audio \
