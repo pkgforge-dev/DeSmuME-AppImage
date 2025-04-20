@@ -30,9 +30,12 @@ xvfb-run -a -- ./lib4bin -p -v -e -s -k \
 	/usr/bin/"$TARGET_BIN"* \
 	/usr/lib/libGLX* \
 	/usr/lib/libGL.so* \
+	/usr/lib/libXss.so* \
 	/usr/lib/gio/modules/* \
 	/usr/lib/alsa-lib/* \
-	/usr/lib/pulseaudio/*
+	/usr/lib/pulseaudio/* \
+	/usr/lib/pipewire-0.3/* \
+	/usr/lib/spa-0.2/*/*
 	
 # Prepare sharun
 echo "Preparing sharun..."
