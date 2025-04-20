@@ -22,8 +22,11 @@ pacman -Syu --noconfirm \
 	desktop-file-utils \
 	desmume \
 	git \
+	libdecor \
+	libxss \
 	mesa \
 	patchelf \
+	pipewire-audio \
 	pulseaudio \
 	pulseaudio-alsa \
 	strace \
