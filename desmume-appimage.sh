@@ -44,7 +44,7 @@ ln ./sharun ./AppRun
 
 # MAKE APPIMAGE WITH URUNTIME
 cd ..
-wget -q "$URUNTIME" -O ./uruntime
+wget "$URUNTIME" -O ./uruntime
 chmod +x ./uruntime
 
 #Add udpate info to runtime
@@ -60,12 +60,14 @@ echo "Generating AppImage..."
 	-i ./AppDir -o "$PACKAGE"-"$VERSION"-anylinux-"$ARCH".AppImage
 
 # Set up the PELF toolchain
-wget -qO ./pelf "https://github.com/xplshn/pelf/releases/latest/download/pelf_$(uname -m)" && chmod +x ./pelf
+wget -O ./pelf "https://github.com/xplshn/pelf/releases/latest/download/pelf_$ARCH" 
+chmod +x ./pelf
 echo "Generating [dwfs]AppBundle...(Go runtime)"
 ./pelf --add-appdir ./AppDir \
-	--appbundle-id="${PACKAGE}-${VERSION}" \
+	--appimage-compat \
+	--appbundle-id="org.desmume.DeSmuME#github.com/$GITHUB_REPOSITORY:$VERSION@$(date +%d_%m_%Y)" \
 	--compression "-C zstd:level=22 -S26 -B8" \
-	--output-to "${PACKAGE}-${VERSION}-anylinux-${ARCH}.dwfs.AppBundle"
+	--output-to "$PACKAGE-$VERSION-anylinux-$ARCH.dwfs.AppBundle"
 
 echo "Generating zsync file..."
 zsyncmake *.AppImage -u *.AppImage
