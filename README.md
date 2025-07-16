@@ -1,8 +1,15 @@
-# DeSmuME-AppImage
+# DeSmuME-AppImage 🐧
 
-AppImage made using [sharun](https://github.com/VHSgunzo/sharun), which makes it extremely easy to turn any binary into a portable package without using containers or anything like that.
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/DeSmuME-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/DeSmuME-AppImage/releases/latest)
+[![CI Build Status](https://github.com//pkgforge-dev/DeSmuME-AppImage/actions/workflows/blank.yml/badge.svg)](https://github.com/pkgforge-dev/DeSmuME-AppImage/releases/latest)
+
+* [Latest Stable Release](https://github.com/pkgforge-dev/DeSmuME-AppImage/releases/latest)
 
 The developer is an asshole that can't be [reasoned with](https://github.com/TASEmulators/desmume/pull/723#issuecomment-2484439582).
+
+---
+
+AppImage made using [sharun](https://github.com/VHSgunzo/sharun), which makes it extremely easy to turn any binary into a portable package without using containers or anything like that.
 
 **This AppImage bundles everything and should work on any linux distro, even on musl based ones.**
 
@@ -21,3 +28,7 @@ This appimage works without fuse2 as it can use fuse3 instead, it can also work 
     <img src="https://github.com/user-attachments/assets/d40067a6-37d2-4784-927c-2c7f7cc6104b" alt="Inspiration Image">
   </a>
 </details>
+
+---
+
+More at: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/) 
