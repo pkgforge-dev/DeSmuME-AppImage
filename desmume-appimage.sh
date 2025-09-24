@@ -14,6 +14,8 @@ export DESKTOP=/usr/share/applications/org.desmume.DeSmuME.desktop
 export ICON=/usr/share/icons/hicolor/scalable/apps/org.desmume.DeSmuME.svg
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export OUTNAME=desmume-"$VERSION"-anylinux-"$ARCH".AppImage
+export DEPLOY_PIPEWIRE=1
+export DEPLOY_OPENGL=1
 
 # Deploy dependencies
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
