@@ -1,28 +1,18 @@
 #!/bin/sh
 
-set -eux
+set -eu
 
-EXTRA_PACKAGES="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/get-debloated-pkgs.sh"
+ARCH=$(uname -m)
 
-echo "Installing dependencies..."
+echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm \
-	base-devel       \
-	desmume          \
-	git              \
-	libdecor         \
-	libxss           \
-	patchelf         \
-	pipewire-audio   \
-	pulseaudio       \
-	pulseaudio-alsa  \
-	strace           \
-	wget             \
-	xorg-server-xvfb \
-	zsync
+pacman -Syu --noconfirm desmume libdecor libxss
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-wget --retry-connrefused --tries=30 "$EXTRA_PACKAGES" -O ./get-debloated-pkgs.sh
-chmod +x ./get-debloated-pkgs.sh
-./get-debloated-pkgs.sh --add-opengl gtk3-mini libxml2-mini opus-mini gdk-pixbuf2-mini librsvg-mini
+get-debloated-pkgs --add-common --prefer-nano
+
+# Comment this out if you need an AUR package
+#make-aur-package PACKAGENAME
+
+# If the application needs to be manually built that has to be done down here
