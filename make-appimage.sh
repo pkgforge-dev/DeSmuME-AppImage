@@ -7,9 +7,10 @@ VERSION=$(pacman -Q desmume | awk '{print $2; exit}') # example command to get v
 export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
-export DESKTOP=/usr/share/applications/org.desmume.DeSmuME.desktop
-export ICON=/usr/share/icons/hicolor/scalable/apps/org.desmume.DeSmuME.svg
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
+export ICON=/usr/share/icons/hicolor/scalable/apps/org.desmume.DeSmuME.svg
+export DESKTOP=/usr/share/applications/org.desmume.DeSmuME.desktop
+export APPNAME=DeSmuME
 export DEPLOY_SDL=1
 export DEPLOY_OPENGL=1
 
