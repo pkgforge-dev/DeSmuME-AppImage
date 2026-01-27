@@ -1,27 +1,30 @@
+<div align="center">
+
 # DeSmuME-AppImage 🐧
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/DeSmuME-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/DeSmuME-AppImage/releases/latest)
-[![CI Build Status](https://github.com//pkgforge-dev/DeSmuME-AppImage/actions/workflows/blank.yml/badge.svg)](https://github.com/pkgforge-dev/DeSmuME-AppImage/releases/latest)
+[![CI Build Status](https://github.com//pkgforge-dev/DeSmuME-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/DeSmuME-AppImage/releases/latest)
+[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/DeSmuME-AppImage)](https://github.com/pkgforge-dev/DeSmuME-AppImage/releases/latest)
 
-* [Latest Stable Release](https://github.com/pkgforge-dev/DeSmuME-AppImage/releases/latest)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TASEmulators/desmume/e96b11fa27b36f6f4dabdbf405fcc7f38db8bd9f/desmume/src/frontend/posix/gtk/org.desmume.DeSmuME.svg" width="128" />
+</p>
 
 The developer is an asshole that can't be [reasoned with](https://github.com/TASEmulators/desmume/pull/723#issuecomment-2484439582).
 
+</div>
+
 ---
 
-AppImage made using [sharun](https://github.com/VHSgunzo/sharun), which makes it extremely easy to turn any binary into a portable package without using containers or anything like that.
+AppImage made using [sharun](https://github.com/VHSgunzo/sharun) and its wrapper [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
 
-**This AppImage bundles everything and should work on any linux distro, even on musl based ones.**
+**This AppImage bundles everything and it should work on any Linux distro, including old and musl-based ones.**
 
-It is possible that this appimage may fail to work with appimagelauncher, I recommend these alternatives instead: 
+This AppImage doesn't require FUSE to run at all, thanks to the [uruntime](https://github.com/VHSgunzo/uruntime).
 
-* [AM](https://github.com/ivan-hc/AM) `am -i desmume` or `appman -i desmume`
+This AppImage is also supplied with a self-updater by default, so any updates to this application won't be missed, you will be prompted for permission to check for updates and if agreed you will then be notified when a new update is available.
 
-* [dbin](https://github.com/xplshn/dbin) `dbin install desmume.appimage`
-
-* [soar](https://github.com/pkgforge/soar) `soar install desmume`
-
-This appimage works without fuse2 as it can use fuse3 instead, it can also work without fuse at all thanks to the [uruntime](https://github.com/VHSgunzo/uruntime)
+Self-updater is disabled by default if AppImage managers like [am](https://github.com/ivan-hc/AM), [soar](https://github.com/pkgforge/soar) or [dbin](https://github.com/xplshn/dbin) exist, which manage AppImage updates.
 
 <details>
   <summary><b><i>raison d'être</i></b></summary>
@@ -31,4 +34,4 @@ This appimage works without fuse2 as it can use fuse3 instead, it can also work 
 
 ---
 
-More at: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/) 
+More at: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/)
