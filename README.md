@@ -10,13 +10,15 @@
   <img src="https://raw.githubusercontent.com/TASEmulators/desmume/e96b11fa27b36f6f4dabdbf405fcc7f38db8bd9f/desmume/src/frontend/posix/gtk/org.desmume.DeSmuME.svg" width="128" />
 </p>
 
-The developer is an asshole that can't be [reasoned with](https://github.com/TASEmulators/desmume/pull/723#issuecomment-2484439582).
+| Latest Stable Release | Upstream URL |
+| :---: | :---: |
+| [Click here](https://github.com/pkgforge-dev/DeSmuME-AppImage/releases/latest) | [Click here](https://github.com/TASEmulators/desmume) |
 
 </div>
 
 ---
 
-AppImage made using [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
+AppImage made using [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks.
 
 **This AppImage bundles everything and it should work on any Linux distro, including old and musl-based ones.**
 
